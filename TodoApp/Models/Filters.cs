@@ -24,12 +24,10 @@
                 { "tulevikus", "Tulevikus" },
                 { "möödas", "Möödas" },
                 { "täna", "Täna" }
-
             };
 
         public bool IsPast => Due.ToLower() == "möödas";
         public bool IsFuture => Due.ToLower() == "tulevikus";
         public bool IsToday => Due.ToLower() == "täna";
-
     }
 }
