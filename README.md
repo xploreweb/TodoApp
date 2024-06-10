@@ -2,7 +2,7 @@
 
 Kodutöö aines "Agiilne tarkvaraarendus, projekt"
 
-Meeskond: Vaiko Edur, Kaspar Taniel Kannel, Oskar-Aleksander Lesment
+Meeskond: Vaiko Edur, Kaspar Taniel Kannel, Oskar-Aleksander Lesment, Serily Lugima
 
 ## Ülesanne 1
 
