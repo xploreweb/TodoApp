@@ -9,7 +9,6 @@ namespace TodoApp.Controllers
     {
         private ToDoContext context;
         public HomeController(ToDoContext ctx) => context = ctx;
-
         public IActionResult Index(string id)
         {
             var filters = new Filters(id);
@@ -17,7 +16,6 @@ namespace TodoApp.Controllers
             ViewBag.Categories = context.Categories.ToList();
             ViewBag.Statuses = context.Statuses.ToList();
             ViewBag.DueFilters = Filters.DueFilterValues;
-
             IQueryable<ToDo> query = context.ToDos
                 .Include(t => t.Category)
                 .Include(t => t.Status);
@@ -50,7 +48,6 @@ namespace TodoApp.Controllers
             }
 
             var tasks = query.OrderBy(t  => t.DueDate).ToList();
-
             return View(tasks);
         }
         [HttpGet]
@@ -77,8 +74,8 @@ namespace TodoApp.Controllers
                 ViewBag.Statuses = context.Statuses.ToList();
                 return View(task);
             }
-
         }
+        
         [HttpPost]
         public IActionResult Filter(string[] filter)
         {
